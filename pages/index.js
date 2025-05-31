@@ -1,24 +1,44 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Aerial Mapping Solutions</title>
-        <meta name="description" content="Professional aerial mapping and surveying services" />
+        <title>Wyndstep - Aerial Mapping Solutions</title>
+        <meta name="description" content="Professional aerial mapping and surveying services by Wyndstep" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.hero}>
+          <div className={styles.logoContainer}>
+            <Image
+              src="/logo.png"
+              alt="Wyndstep Logo"
+              width={300}
+              height={100}
+              priority
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
           <h1 className={styles.title}>
-            Welcome to Aerial Mapping Solutions
+            Welcome to Wyndstep
           </h1>
           <p className={styles.description}>
             Professional aerial mapping and surveying services for your projects
           </p>
+          <div className={styles.heroImage}>
+            <Image
+              src="/hero.gif"
+              alt="Aerial Mapping Demo"
+              width={800}
+              height={450}
+              priority
+            />
+          </div>
           <button className={styles.ctaButton}>
             Get Started
           </button>
@@ -54,7 +74,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>© 2024 Aerial Mapping Solutions. All rights reserved.</p>
+        <p>© 2024 Wyndstep. All rights reserved.</p>
       </footer>
     </div>
   );
